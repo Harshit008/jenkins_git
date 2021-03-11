@@ -27,11 +27,15 @@ public class LoginServlet extends HttpServlet {
 		String uname=request.getParameter("uname");
 		String pass=request.getParameter("password");
 		if(uname.equals("Zensar")&& pass.equals("zensar")) {
+			response.setContentType("text/html");
 			response.getWriter().print("<h2> Authentication Successful!!</h2>");
 			
 		}
-		else
+		else {
+			response.setContentType("text/html");
 			response.getWriter().print("<h2> Authentication Failed!!</h2>");
+		}
+			
 	}
 
 }
